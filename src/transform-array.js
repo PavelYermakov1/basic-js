@@ -1,6 +1,6 @@
 module.exports = function transform(arr) {
     if(!Array.isArray(arr)) throw new Error();
-    let acc = [];
+    const acc = [];
     for(let i = 0; i < arr.length; ++i) {
         if(arr[i] === '--double-next') {
             if(i < arr.length - 1) {
@@ -22,6 +22,5 @@ module.exports = function transform(arr) {
             acc.push(arr[i]);
         }
     }
-
     return acc;
 };
